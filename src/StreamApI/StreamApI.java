@@ -68,6 +68,8 @@ class example1{
         Integer max = marks.stream().max(Integer::compareTo).get();
         System.out.println(max);
 
+        
+
     }
 }
 
