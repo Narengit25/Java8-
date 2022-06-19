@@ -7,7 +7,7 @@ public class ConsumerTest {
     // Consumer <T> --->Void
 
     public static void main(String[] args) {
-        Consumer<String> c = System.out::println;
+        Consumer<String> c = s -> System.out.println(s);
         c.accept("Naren");
     }
 

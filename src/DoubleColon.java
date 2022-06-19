@@ -5,6 +5,7 @@ public class DoubleColon
 
     // Static code ---> className :: MethodName
     //Object Reference :: methodName
+    // Different Return types are allowed, But Arguments Must be Same
 
     public static void main(String[] args) {
 
@@ -33,3 +34,23 @@ class colonTest{
     }
 }
 
+interface  Interface1{
+     void add(int a,int b);
+
+     static void product(double x, double y){
+         System.out.println("The Product is : " + (x*y));
+     }
+}
+
+class colon{
+
+    public static void main(String[] args) {
+        Interface1 i2 =(a, b) -> System.out.println(a+b);
+        i2.add(2,3);
+
+        Interface1 i1 = Interface1::product;
+        i1.add(10,20);  // return type and name must not be Same
+
+    }
+
+}
